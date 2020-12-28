@@ -76,4 +76,4 @@ C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Swashb
 C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Projetos\curso_api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\application.MvcApplicationPartsAssemblyInfo.cs
 C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Projetos\curso_api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\scopedcss\bundle\application.styles.css
