@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4jUKzf3D2FNMUEm2e71vUyEXf2MAK3YDo41CkvyilFCdgD1rLV7S3HMpXVYK43bCkg06B8u4r78kkOez9fPbHA==",
+  "dgSpecHash": "+SND2aJ9ot5Lvhl8jHQJQMrx2x6QawjeulYGSSOPyeu30V2b1KJLNIauV3pB7RVCjyNfEPGfPuMhkmhOhanOUg==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\curso_api_netcore\\src\\Api.Application\\application.csproj",
   "expectedPackageFiles": [

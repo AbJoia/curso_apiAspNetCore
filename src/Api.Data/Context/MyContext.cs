@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using src.Api.Data.Mapping;
 using src.Api.Domain.Entities;
@@ -13,6 +14,17 @@ namespace src.Api.Data.Context
         protected override void OnModelCreating (ModelBuilder modelBuilder){
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<UserEntity> (new UserMap().Configure);
+
+            modelBuilder.Entity<UserEntity>().HasData(
+                new UserEntity
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Administrador",
+                    Email = "adm@adm.com",
+                    CreateAt = DateTime.UtcNow,
+                    UpdateAt = DateTime.UtcNow
+                }
+            );
         }
 
     }

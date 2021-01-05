@@ -17,17 +17,14 @@ namespace src.Api.Service.Services
     {
         private IUserRepository _repository;
         private SigningConfigurations _signingConfiguration;
-        private TokenConfiguration _tokenConfigurations;
         private IConfiguration _configuration;
 
         public LoginService (IUserRepository repository,
-                             SigningConfigurations signingConfiguration,
-                             TokenConfiguration tokenConfigurations,
+                             SigningConfigurations signingConfiguration,                            
                              IConfiguration configuration)
         {
             _repository = repository;
-            _signingConfiguration = signingConfiguration;
-            _tokenConfigurations = tokenConfigurations;
+            _signingConfiguration = signingConfiguration;            
             _configuration = configuration;
         }
 
@@ -57,7 +54,8 @@ namespace src.Api.Service.Services
                     );
 
                     DateTime createDate = DateTime.Now;
-                    DateTime expirationDate = createDate + TimeSpan.FromSeconds(_tokenConfigurations.Seconds);
+                    DateTime expirationDate = createDate + TimeSpan.FromSeconds(
+                        Convert.ToInt32(Environment.GetEnvironmentVariable("Seconds")));
 
                     var handler = new JwtSecurityTokenHandler();
                     string token = CreateToken(identity, createDate, expirationDate, handler);
@@ -77,8 +75,8 @@ namespace src.Api.Service.Services
             var securityToken = handler.CreateToken(
                 new SecurityTokenDescriptor
                 {
-                    Issuer = _tokenConfigurations.Issuer,
-                    Audience = _tokenConfigurations.Audience,
+                    Issuer = Environment.GetEnvironmentVariable("Issuer"),
+                    Audience = Environment.GetEnvironmentVariable("Audience"),
                     SigningCredentials = _signingConfiguration.SigningCredentials,
                     Subject = identity,
                     NotBefore = createDate,

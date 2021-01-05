@@ -9,6 +9,7 @@ C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\Api.S
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\Faker.NETCore.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
@@ -59,6 +60,7 @@ C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\xunit
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\xunit.assert.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\xunit.core.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\xunit.execution.dotnet.dll
+C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\de-DE\Faker.NETCore.resources.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -148,5 +150,3 @@ C:\Projetos\curso_api_netcore\src\Api.Service.Test\obj\Debug\netcoreapp3.1\Api.S
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\obj\Debug\netcoreapp3.1\Api.Service.Test.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\obj\Debug\netcoreapp3.1\Api.Service.Test.pdb
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\obj\Debug\netcoreapp3.1\Api.Service.Test.genruntimeconfig.cache
-c:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\Faker.NETCore.dll
-c:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\de-DE\Faker.NETCore.resources.dll
