@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using src.Api.Domain.Dtos.User;
@@ -45,7 +47,23 @@ namespace src.Api.Integration.Test
             Assert.NotNull(listFromJson);
             Assert.True(listFromJson.Count() > 0);
             Assert.True(listFromJson.Where(r => r.Id == registroPost.Id).Count() == 1);
-            
+
+            //Put
+            var updateDtoUser =  new UserDTOUpdate()
+            {
+                Id = registroPost.Id,
+                Name = Faker.Name.FullName(),
+                Email = Faker.Internet.Email()
+            };
+
+            var stringContent = new StringContent(JsonConvert.SerializeObject(updateDtoUser),
+                                                  Encoding.UTF8, "application/json");
+            response = await client.PutAsync($"{hostApi}users", stringContent);
+            jsonResult = await response.Content.ReadAsStringAsync();
+            var registroAtualizado = JsonConvert.DeserializeObject<UserDTOUpdateResult>(jsonResult);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.NotEqual(registroPost.Name, registroAtualizado.Name);
+            Assert.NotEqual(registroPost.Email, registroAtualizado.Email);            
         }
     }
 }
