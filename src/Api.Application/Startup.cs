@@ -43,7 +43,8 @@ namespace application
                                                     "Server=localhost;"
                                                    +"Port=3306;"
                                                    +"Database=dbAPI_Integration;"
-                                                   +"Uid=root;Pwd=admin123");
+                                                   +"Uid=root;"
+                                                   +"Pwd=admin123");
 
                 Environment.SetEnvironmentVariable("Database", "MYSQL");
                 Environment.SetEnvironmentVariable( "Migration", "APLICAR");
