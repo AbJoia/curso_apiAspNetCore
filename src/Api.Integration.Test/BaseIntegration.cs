@@ -43,7 +43,7 @@ namespace src.Api.Integration.Test
        {
            var loginDto = new LoginDTO()
            {
-               Email = "joia@gmail.com"
+               Email = "adm@mail.com"
            };
 
             var resultLogin = await PostJsonAsync(loginDto, $"{hostApi}login", client);

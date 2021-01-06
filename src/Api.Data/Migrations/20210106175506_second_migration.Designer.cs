@@ -9,8 +9,8 @@ using src.Api.Data.Context;
 namespace Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20201221152536_UserMigration")]
-    partial class UserMigration
+    [Migration("20210106175506_second_migration")]
+    partial class second_migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,6 +46,16 @@ namespace Data.Migrations
                         .IsUnique();
 
                     b.ToTable("User");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("dd89045c-fa9b-4662-923c-829b575992f4"),
+                            CreateAt = new DateTime(2021, 1, 6, 17, 55, 5, 958, DateTimeKind.Utc).AddTicks(8109),
+                            Email = "adm@mail.com",
+                            Name = "Administrador",
+                            UpdateAt = new DateTime(2021, 1, 6, 17, 55, 5, 958, DateTimeKind.Utc).AddTicks(9249)
+                        });
                 });
 #pragma warning restore 612, 618
         }

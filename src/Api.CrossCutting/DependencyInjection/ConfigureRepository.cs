@@ -1,3 +1,4 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using src.Api.Data.Context;
@@ -16,7 +17,7 @@ namespace src.Api.CrossCutting.DependencyInjection
             serviceCollection.AddScoped<IUserRepository, UserImplementation>(); 
 
             serviceCollection.AddDbContext<MyContext>(
-                options => options.UseMySql("Server=localhost;Port=3306;Database=dbAPI;Uid=root;Pwd=admin123")
+                options => options.UseMySql(Environment.GetEnvironmentVariable("DB_Connection"))
             );  
         }
     }
