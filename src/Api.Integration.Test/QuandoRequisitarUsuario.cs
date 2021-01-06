@@ -63,7 +63,17 @@ namespace src.Api.Integration.Test
             var registroAtualizado = JsonConvert.DeserializeObject<UserDTOUpdateResult>(jsonResult);
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             Assert.NotEqual(registroPost.Name, registroAtualizado.Name);
-            Assert.NotEqual(registroPost.Email, registroAtualizado.Email);            
+            Assert.NotEqual(registroPost.Email, registroAtualizado.Email);  
+
+            //GetId
+            response = await client.GetAsync($"{hostApi}users/{registroPost.Id}");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            jsonResult = await response.Content.ReadAsStringAsync();
+            var registroSelecionado = JsonConvert.DeserializeObject<UserDTO>(jsonResult);
+            Assert.NotNull(registroSelecionado);
+            Assert.Equal(registroAtualizado.Name, registroSelecionado.Name);
+            Assert.Equal(registroAtualizado.Email, registroSelecionado.Email);
+            Assert.Equal(registroPost.Id, registroSelecionado.Id);          
         }
     }
 }
