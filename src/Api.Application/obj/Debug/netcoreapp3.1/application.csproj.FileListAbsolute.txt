@@ -1,5 +1,6 @@
 C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\application.exe
 C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\application.deps.json
 C:\Projetos\curso_api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\application.runtimeconfig.json
@@ -76,4 +77,3 @@ C:\Projetos\curso_api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\static
 C:\Projetos\curso_api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\application.dll
 C:\Projetos\curso_api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\application.pdb
 C:\Projetos\curso_api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\application.genruntimeconfig.cache
-C:\Projetos\curso_api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\scopedcss\bundle\application.styles.css
