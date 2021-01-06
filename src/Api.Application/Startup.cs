@@ -39,7 +39,12 @@ namespace application
             //Config Integration Teste
             if(_environment.IsEnvironment("Testing"))
             {
-                Environment.SetEnvironmentVariable("DB_Connection", "Server=localhost;Port=3306;Database=dbAPI_Integration;Uid=root;Pwd=admin123");
+                Environment.SetEnvironmentVariable("DB_Connection",
+                                                    "Server=localhost;"
+                                                   +"Port=3306;"
+                                                   +"Database=dbAPI_Integration;"
+                                                   +"Uid=root;Pwd=admin123");
+
                 Environment.SetEnvironmentVariable("Database", "MYSQL");
                 Environment.SetEnvironmentVariable( "Migration", "APLICAR");
                 Environment.SetEnvironmentVariable( "Audience", "ExemploAudience");
@@ -63,13 +68,7 @@ namespace application
 
             //Implementação Autenticação
             var signingConfigurations = new SigningConfigurations();
-            services.AddSingleton(signingConfigurations);           
-
-            var tokenConfigurations = new TokenConfiguration();
-            new ConfigureFromConfigurationOptions<TokenConfiguration>(
-                Configuration.GetSection("TokenConfiguration"))
-                        .Configure(tokenConfigurations);
-            services.AddSingleton(tokenConfigurations);
+            services.AddSingleton(signingConfigurations);            
 
             services.AddAuthentication(authOptions => {
                 authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -77,8 +76,8 @@ namespace application
             }).AddJwtBearer(bearerOptions => {
                 var paramsValidation = bearerOptions.TokenValidationParameters;
                 paramsValidation.IssuerSigningKey = signingConfigurations.Key;
-                paramsValidation.ValidAudience = tokenConfigurations.Audience;
-                paramsValidation.ValidIssuer = tokenConfigurations.Issuer;
+                paramsValidation.ValidAudience = Environment.GetEnvironmentVariable("Audience");
+                paramsValidation.ValidIssuer = Environment.GetEnvironmentVariable("Issuer");
                 paramsValidation.ValidateIssuerSigningKey = true;
                 paramsValidation.ValidateLifetime = true;
                 paramsValidation.ClockSkew = TimeSpan.Zero;
