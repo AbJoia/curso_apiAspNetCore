@@ -73,7 +73,15 @@ namespace src.Api.Integration.Test
             Assert.NotNull(registroSelecionado);
             Assert.Equal(registroAtualizado.Name, registroSelecionado.Name);
             Assert.Equal(registroAtualizado.Email, registroSelecionado.Email);
-            Assert.Equal(registroPost.Id, registroSelecionado.Id);          
+            Assert.Equal(registroPost.Id, registroSelecionado.Id); 
+
+            //Delete
+            response = await client.DeleteAsync($"{hostApi}users/{registroPost.Id}");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            //Get Id apos Delete 
+            response = await client.GetAsync($"{hostApi}users/{registroPost.Id}");
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);      
         }
     }
 }

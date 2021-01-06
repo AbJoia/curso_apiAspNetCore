@@ -1,6 +1,5 @@
 C:\Projetos\curso_api_netcore\src\Api.Application.Test\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Projetos\curso_api_netcore\src\Api.Application.Test\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Projetos\curso_api_netcore\src\Api.Application.Test\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Projetos\curso_api_netcore\src\Api.Application.Test\bin\Debug\netcoreapp3.1\application.exe
 C:\Projetos\curso_api_netcore\src\Api.Application.Test\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Projetos\curso_api_netcore\src\Api.Application.Test\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll

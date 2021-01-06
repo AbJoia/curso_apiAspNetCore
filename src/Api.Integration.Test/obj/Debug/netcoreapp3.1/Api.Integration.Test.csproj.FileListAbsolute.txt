@@ -159,4 +159,3 @@ C:\Projetos\curso_api_netcore\src\Api.Integration.Test\obj\Debug\netcoreapp3.1\A
 C:\Projetos\curso_api_netcore\src\Api.Integration.Test\obj\Debug\netcoreapp3.1\Api.Integration.Test.dll
 C:\Projetos\curso_api_netcore\src\Api.Integration.Test\obj\Debug\netcoreapp3.1\Api.Integration.Test.pdb
 C:\Projetos\curso_api_netcore\src\Api.Integration.Test\obj\Debug\netcoreapp3.1\Api.Integration.Test.genruntimeconfig.cache
-c:\Projetos\curso_api_netcore\src\Api.Integration.Test\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
