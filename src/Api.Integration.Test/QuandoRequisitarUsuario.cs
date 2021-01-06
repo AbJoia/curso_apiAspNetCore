@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -25,6 +27,7 @@ namespace src.Api.Integration.Test
                 Email = _email
             };
 
+            //Post
             var response = await PostJsonAsync(userDTO, $"{hostApi}users", client);
             var postResult = await response.Content.ReadAsStringAsync();
             var registroPost = JsonConvert.DeserializeObject<UserDTOCreateResult>(postResult);
@@ -32,6 +35,16 @@ namespace src.Api.Integration.Test
             Assert.Equal(userDTO.Name, registroPost.Name);
             Assert.Equal(userDTO.Email, registroPost.Email);
             Assert.True(registroPost.Id != default(Guid));
+
+            //GetAll
+            response = await client.GetAsync($"{hostApi}users");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+
+            var jsonResult = await response.Content.ReadAsStringAsync();
+            var listFromJson = JsonConvert.DeserializeObject<IEnumerable<UserDTO>>(jsonResult);
+            Assert.NotNull(listFromJson);
+            Assert.True(listFromJson.Count() > 0);
+            Assert.True(listFromJson.Where(r => r.Id == registroPost.Id).Count() == 1);
             
         }
     }
