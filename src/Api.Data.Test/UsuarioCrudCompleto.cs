@@ -32,33 +32,40 @@ namespace src.Api.Data.Test
                     Name = Faker.Name.FullName()
                 };
 
+                //Insert
                 var _registroCriado = await _repositorio.InsertAsync(_entity);
                 Assert.NotNull(_registroCriado);
                 Assert.Equal(_entity.Email, _registroCriado.Email);
                 Assert.Equal(_entity.Name, _registroCriado.Name);
                 Assert.False(_registroCriado.Id == Guid.Empty);
 
+                //Update
                 _entity.Name = Faker.Name.First();
                 var _registroAtualizado = await _repositorio.UpdateAsync(_entity);
                 Assert.NotNull(_registroAtualizado);
                 Assert.Equal(_entity.Email, _registroAtualizado.Email);
                 Assert.Equal(_entity.Name, _registroAtualizado.Name);
 
+                //Exist
                 var _registroExiste = await _repositorio.ExistAsync(_registroAtualizado.Id);
                 Assert.True(_registroExiste);
 
+                //Get
                 var _registroSelecionado = await _repositorio.SelectAsync(_registroAtualizado.Id);
                 Assert.NotNull(_registroSelecionado);
                 Assert.Equal(_registroAtualizado.Email, _registroSelecionado.Email);
                 Assert.Equal(_registroAtualizado.Name, _registroSelecionado.Name);
 
+                //GetAll
                 var _todosRegistros = await _repositorio.SelectAsync();
                 Assert.NotNull(_todosRegistros);
                 Assert.True(_todosRegistros.Count() > 0);
 
+                //FindByLogin
                 var _usuarioPadrao = await _repositorio.FindByLogin(_registroSelecionado.Email);
                 Assert.NotNull(_usuarioPadrao);
 
+                //Delete
                 var _removeu = await _repositorio.DeleteAsync(_registroSelecionado.Id);
                 Assert.True(_removeu);                
             }
