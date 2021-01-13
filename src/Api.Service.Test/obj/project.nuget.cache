@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rdK7K+K8SIMbub1UwCvlz1h84ddrFWOKLTPHg6R8OxewSxMxR2BeBNdx2cmAGdvkM+pMt9MFv8gaMbzq3JPpFQ==",
+  "dgSpecHash": "6RrMtO7RwmNgHzPhKYisYKQTnu4NI9jAoXaNVpsuFH387KR4Pw/7206QpaW/i5Wy2+XGTe11ghUHhTiEZf7z9Q==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\curso_api_netcore\\src\\Api.Service.Test\\Api.Service.Test.csproj",
   "expectedPackageFiles": [

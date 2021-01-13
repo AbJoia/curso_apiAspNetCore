@@ -7,7 +7,7 @@ namespace src.Api.Domain.Interfaces.Services.Uf
 {
     public interface IUfService
     {
-        Task<UfDto> GetAsync(Guid Id);
+        Task<UfDto> GetAsync(Guid id);
         Task<IEnumerable<UfDto>> GetAllAsync();
     }
 }

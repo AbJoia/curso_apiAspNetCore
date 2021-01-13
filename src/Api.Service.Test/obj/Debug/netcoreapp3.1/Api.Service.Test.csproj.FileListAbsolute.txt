@@ -150,3 +150,4 @@ C:\Projetos\curso_api_netcore\src\Api.Service.Test\obj\Debug\netcoreapp3.1\Api.S
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\obj\Debug\netcoreapp3.1\Api.Service.Test.dll
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\obj\Debug\netcoreapp3.1\Api.Service.Test.pdb
 C:\Projetos\curso_api_netcore\src\Api.Service.Test\obj\Debug\netcoreapp3.1\Api.Service.Test.genruntimeconfig.cache
+C:\Projetos\curso_api_netcore\src\Api.Service.Test\bin\Debug\netcoreapp3.1\xunit.runner.json
