@@ -24,10 +24,12 @@ namespace src.Api.Application.Controllers
         [Route("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            if(!ModelState.IsValid) BadRequest(ModelState);
+            if(!ModelState.IsValid) return BadRequest(ModelState);
             try
             {
-                return Ok(await _service.Delete(id));
+                var result = await _service.Delete(id);
+                if(!result) return NotFound();
+                return Ok(result);
             }
             catch (ArgumentException e)
             {                
@@ -121,7 +123,6 @@ namespace src.Api.Application.Controllers
             {
                 return StatusCode((int) HttpStatusCode.InternalServerError, e.Message);                
             }
-
         }
 
         [Authorize("Bearer")]

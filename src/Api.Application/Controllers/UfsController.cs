@@ -40,8 +40,10 @@ namespace src.Api.Application.Controllers
         {
             if(!ModelState.IsValid) return BadRequest(ModelState);
             try
-            {                
-                return Ok(await _service.GetAsync(id));
+            { 
+                var result = await _service.GetAsync(id);
+                if(result == null) return NotFound();               
+                return Ok(result);
             }
             catch (ArgumentException e)
             {                
