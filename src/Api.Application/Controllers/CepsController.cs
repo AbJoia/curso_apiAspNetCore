@@ -27,7 +27,9 @@ namespace src.Api.Application.Controllers
             if(!ModelState.IsValid) return BadRequest();
             try
             {
-                return Ok(await _service.Delete(id));
+                var result = await _service.Delete(id);
+                if(!result) return NotFound();
+                return Ok(result);
             }
             catch (ArgumentException e)
             {                

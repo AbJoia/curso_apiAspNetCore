@@ -9,7 +9,7 @@ using Xunit;
 
 namespace src.Api.Application.Test.Municipio.QuandoExecutarCreate
 {
-    public class Retorno_Create
+    public class Retorno_Created
     {
        private MunicipiosController _controller;
 
