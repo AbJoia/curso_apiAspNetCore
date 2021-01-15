@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using src.Api.Domain.Dtos.User;
 using Xunit;
 
-namespace src.Api.Integration.Test
+namespace src.Api.Integration.Test.Usuario
 {
     public class QuandoRequisitarUsuario : BaseIntegration
     {
